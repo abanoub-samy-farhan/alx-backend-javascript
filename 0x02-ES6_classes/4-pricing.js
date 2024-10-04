@@ -1,4 +1,4 @@
-import { Currency } from './3-currency.js';
+import Currency from './3-currency.js';
 
 export default class Pricing {
     constructor(amount, currency) {
@@ -23,7 +23,7 @@ export default class Pricing {
     }
     set currency(newcurrency) {
         if (newcurrency instanceof Currency) this._currency = newcurrency;
-        else throw TypeError("currency have to be a currency");
+        else throw TypeError("currency have to be a string");
     }
 
     displayFullPrice() {
