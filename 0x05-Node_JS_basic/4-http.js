@@ -10,6 +10,6 @@ app.on('request', (req, res) => {
   res.write(Buffer.from(responseMsg));
 });
 
-app.listen(12345, 'localhost', () => {
+app.listen(1245, 'localhost', () => {
   console.log('Server is listening on port 12345');
 });
