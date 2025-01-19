@@ -7,8 +7,11 @@ const countStudents = (path) => new Promise((res, reject) => {
   }
 
   fs.readFile(path, 'utf8', (err, data) => {
+    if (err) {
+      reject(new Error('Cannot load the database'));
+    }
     if (data) {
-      const effictiveData = data.split('\n');
+      const effictiveData = data.toString('utf-8').trim().split('\n');
       const headers = effictiveData[0].split(',');
       const studentPropNames = headers.slice(0, headers.length - 1);
       const StudentsGroupedbyfield = {};
