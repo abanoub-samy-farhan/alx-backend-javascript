@@ -13,3 +13,5 @@ app.on('request', (req, res) => {
 app.listen(1245, 'localhost', () => {
   console.log('Server is listening on port 12345');
 });
+
+module.exports = app;
