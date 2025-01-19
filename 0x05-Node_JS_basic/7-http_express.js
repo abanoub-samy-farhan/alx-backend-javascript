@@ -59,7 +59,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
 });
 
 app.get('/', (req, res) => {
-  const responseMsg = 'Hello ALX!';
+  const responseMsg = 'Hello Holberton School!';
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.setHeader('Content-Length', responseMsg.length);
